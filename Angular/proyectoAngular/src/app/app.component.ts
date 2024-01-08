@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 // Importa los módulos 'CommonModule' y 'RouterOutlet' desde '@angular/common' y '@angular/router' respectivamente
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { AlumnoComponent } from './Alumnos/Alumno.component';
 
 // Define un componente con metadatos
 @Component({
@@ -14,13 +15,14 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   
   // Importa los módulos necesarios para este componente
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, AlumnoComponent],
   
-  template:  '<h1>{{title}}</h1>',
-  /* Antes estaba esto 
-  Define la plantilla HTML que se usará para este componente
-  templateUrl: './app.component.html',
-  */
+  template: `
+    <div> 
+      <h1>{{encabezado}}</h1>
+      <el-alumno></el-alumno>
+    </div>
+  `,
   // Define la ruta al archivo CSS que se usará para estilos específicos de este componente
   styleUrl: './app.component.css'
 })
@@ -28,5 +30,5 @@ import { RouterOutlet } from '@angular/router';
 // Define la clase del componente
 export class AppComponent {
   // Define una propiedad 'title' que se puede usar en la plantilla HTML asociada a este componente
-  title = 'proyectoAngular';
+  encabezado = 'Datos alumno';
 }
