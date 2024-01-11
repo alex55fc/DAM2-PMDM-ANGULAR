@@ -18,6 +18,7 @@ import { AlumnoComponent } from './Alumnos/Alumno.component';
       <h1>{{(encabezado == '')?getNombreCompleto() : 'No encontrado'}}</h1>
       <img src="{{imagen}}" alt="Logo Salesianos" width='200'>
       <el-alumno></el-alumno>
+      <button [disabled]="desactivado">Pulsa aqui</button>
     </div>
   `,
   // Define la ruta al archivo CSS que se usará para estilos específicos de este componente
@@ -29,7 +30,7 @@ export class AppComponent {
   //depende de lo que pongamos en el encabeza aqui abajo se vera una cosa u otra en la pagina web
   encabezado = 'e';
   imagen : string = 'https://salesianosrioja.com/wp-content/uploads/2016/03/Logo-Salesianos_vertical.png';
-
+  desactivado : boolean = false;
   nombre : string= 'Perico';
   apellido : string = 'Delgado'
 
