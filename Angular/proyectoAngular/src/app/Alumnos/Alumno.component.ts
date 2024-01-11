@@ -7,7 +7,7 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   //imports: [CommonModule, RouterOutlet],
   templateUrl: './Alumno.component.html',  
-  //styleUrl: './app.component.css'
+  styleUrl: './Alumno.component.css'
 })
 
 // Define la clase del componente
