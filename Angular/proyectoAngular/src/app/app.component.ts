@@ -26,6 +26,7 @@ import { AlumnoComponent } from './Alumnos/Alumno.component';
 
 // Define la clase del componente
 export class AppComponent {
+  //depende de lo que pongamos en el encabeza aqui abajo se vera una cosa u otra en la pagina web
   encabezado = 'e';
   imagen : string = 'https://salesianosrioja.com/wp-content/uploads/2016/03/Logo-Salesianos_vertical.png';
 
