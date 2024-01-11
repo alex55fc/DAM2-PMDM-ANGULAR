@@ -9,12 +9,8 @@ import { AlumnoComponent } from './Alumnos/Alumno.component';
 // Define un componente con metadatos
 @Component({
   // Define el selector del componente, este será usado para insertar este componente en otros archivos HTML
-  selector: 'app-root',
-  
-  // Propiedad 'standalone' que no es un metadato de un componente Angular, es posible que sea una propiedad personalizada para este proyecto en particular
-  standalone: true,
-  
-  // Importa los módulos necesarios para este componente
+  selector: 'app-root',  
+  standalone: true,  
   imports: [CommonModule, RouterOutlet, AlumnoComponent],
   
   template: `
@@ -29,6 +25,5 @@ import { AlumnoComponent } from './Alumnos/Alumno.component';
 
 // Define la clase del componente
 export class AppComponent {
-  // Define una propiedad 'title' que se puede usar en la plantilla HTML asociada a este componente
   encabezado = 'Datos alumno';
 }
