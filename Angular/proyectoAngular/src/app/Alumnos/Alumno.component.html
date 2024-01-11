@@ -1,19 +1,29 @@
 <table>
-    <tr>
-        <td>Nombre</td>
-        <td>{{nombre}}</td>
+    <thead>
+        <tr>
+            <!--otra forma de hacerlo 
+            <th [attr.colspan]=colummnas>Ciclista</th>
+            -->
+            <th attr.colspan={{colummnas}}>Ciclista</th>
+        </tr>
+    </thead>
+    <tbody>
+         <tr>
+            <td>Nombre</td>
+            <td>{{nombre}}</td>
+        </tr>
+        <tr>
+            <td>Apellidos</td>
+            <td>{{apellidos}}</td>
+        </tr>
+        <tr>
+            <td>Direccion</td>
+            <td>{{direccion}}</td>
+        <tr>
+            <td>Edad</td>
+            <td>{{edad}}</td>   
+        </tr>   
+    </tbody>
 
-    </tr>
-    <tr>
-        <td>Apellidos</td>
-        <td>{{apellidos}}</td>
-    </tr>
-    <tr>
-        <td>Direccion</td>
-        <td>{{direccion}}</td>
-    <tr>
-        <td>Edad</td>
-        <td>{{edad}}</td>   
-    </tr>
 
 </table>

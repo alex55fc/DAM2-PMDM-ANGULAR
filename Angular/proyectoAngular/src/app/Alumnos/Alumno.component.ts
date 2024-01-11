@@ -12,6 +12,8 @@ import { RouterOutlet } from '@angular/router';
 
 // Define la clase del componente
 export class AlumnoComponent {
+    //depende de lo que pongamos aqui abajo se vera una cosa u otra en la pagina web
+    colummnas : number = 2;
     nombre: string = 'Perico';
     apellidos: string = 'Delgado';
     direccion: string = 'Madrid';
