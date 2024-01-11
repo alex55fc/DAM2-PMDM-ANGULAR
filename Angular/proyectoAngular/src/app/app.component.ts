@@ -15,7 +15,7 @@ import { AlumnoComponent } from './Alumnos/Alumno.component';
   
   template: `
     <div> 
-      <h1>{{getNombreCompleto()}}</h1>
+      <h1>{{(encabezado == '')?getNombreCompleto() : 'No encontrado'}}</h1>
       <img src="{{imagen}}" alt="Logo Salesianos" width='200'>
       <el-alumno></el-alumno>
     </div>
@@ -26,7 +26,7 @@ import { AlumnoComponent } from './Alumnos/Alumno.component';
 
 // Define la clase del componente
 export class AppComponent {
-  encabezado = 'Datos alumno';
+  encabezado = 'e';
   imagen : string = 'https://salesianosrioja.com/wp-content/uploads/2016/03/Logo-Salesianos_vertical.png';
 
   nombre : string= 'Perico';
