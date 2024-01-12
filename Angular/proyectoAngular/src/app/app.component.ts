@@ -13,7 +13,13 @@ import { AlumnoComponent } from './Alumnos/Alumno.component';
   standalone: true,  
   imports: [CommonModule, RouterOutlet, AlumnoComponent],
   
-  template: `
+  template: 
+  //ngIf es para que si es true se muestre y si es false no se muestre
+  `
+    <img src="assets/tricolorr.jpg" width='200' *ngIf='visible'>
+    <button (click)="onClick()">Pulsa aqui</button>
+  `,
+  /*`
     <div> 
       <h1>{{(encabezado == '')?getNombreCompleto() : 'No encontrado'}}</h1>
       <img src="{{imagen}}" alt="Logo Salesianos" width='200'>
@@ -21,6 +27,7 @@ import { AlumnoComponent } from './Alumnos/Alumno.component';
       <button [disabled]="desactivado">Pulsa aqui</button>
     </div>
   `,
+  */
   // Define la ruta al archivo CSS que se usará para estilos específicos de este componente
   styleUrl: './app.component.css'
 })
@@ -36,5 +43,10 @@ export class AppComponent {
 
   getNombreCompleto() : string {
     return this.nombre + ' '+ this.apellido;
+  }
+  //ejercicio imagen
+  visible : boolean = true;
+  onClick(): void{
+    this.visible = false;
   }
 }
