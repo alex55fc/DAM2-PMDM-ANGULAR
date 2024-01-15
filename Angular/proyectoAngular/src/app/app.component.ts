@@ -14,11 +14,13 @@ import { AlumnoComponent } from './Alumnos/Alumno.component';
   imports: [CommonModule, RouterOutlet, AlumnoComponent],
   
   template: 
-  //ngIf es para que si es true se muestre y si es false no se muestre
+  `<el-alumno></el-alumno>`,
+  /*ngIf es para que si es true se muestre y si es false no se muestre
   `
     <img src="assets/tricolorr.jpg" width='200' *ngIf='visible'>
     <button (click)="onClick()">Pulsa aqui</button>
   `,
+  */
   /*`
     <div> 
       <h1>{{(encabezado == '')?getNombreCompleto() : 'No encontrado'}}</h1>
@@ -44,9 +46,10 @@ export class AppComponent {
   getNombreCompleto() : string {
     return this.nombre + ' '+ this.apellido;
   }
-  //ejercicio imagen
+  /*ejercicio imagen
   visible : boolean = true;
   onClick(): void{
     this.visible = false;
   }
+  */
 }

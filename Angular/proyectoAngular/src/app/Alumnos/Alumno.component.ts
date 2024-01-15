@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'el-alumno',
   standalone: true,
-  //imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './Alumno.component.html',  
   styleUrl: './Alumno.component.css'
 })
@@ -19,5 +19,10 @@ export class AlumnoComponent {
     direccion: string = 'Madrid';
     edad: number = 20;
 
+    //nuevo ejercicio 
+    visibles : boolean = false;
+    alternarVisibilidad(): void{
+      this.visibles = !this.visibles;
+    }
   }
   
