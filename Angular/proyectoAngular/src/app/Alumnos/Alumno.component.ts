@@ -19,7 +19,7 @@ export class AlumnoComponent {
     direccion: string = 'Madrid';
     edad: number = 20;
 
-    //nuevo ejercicio 
+    //nuevo ejercicio uso de *ngIf
     visibles : boolean = false;
     alternarVisibilidad(): void{
       this.visibles = !this.visibles;
