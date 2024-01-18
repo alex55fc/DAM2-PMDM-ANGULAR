@@ -5,16 +5,22 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { AlumnoComponent } from './Alumnos/Alumno.component';
-
+// Importa el componente 'AlumnoListaComponent' desde el archivo 'AlumnoLista.component.ts'
+import { AlumnoListaComponent } from './Alumnos/AlumnoLista.component';
 // Define un componente con metadatos
 @Component({
   // Define el selector del componente, este será usado para insertar este componente en otros archivos HTML
   selector: 'app-root',  
   standalone: true,  
-  imports: [CommonModule, RouterOutlet, AlumnoComponent],
+  //añadir aqui cada import que hagamos
+  imports: [CommonModule, RouterOutlet, AlumnoComponent, AlumnoListaComponent],
   
   template: 
-  `<el-alumno></el-alumno>`,
+  `<el-alumno></el-alumno>
+  <lista-alumnos></lista-alumnos>
+  `
+  ,
+
   /*ngIf es para que si es true se muestre y si es false no se muestre
   `
     <img src="assets/tricolorr.jpg" width='200' *ngIf='visible'>
