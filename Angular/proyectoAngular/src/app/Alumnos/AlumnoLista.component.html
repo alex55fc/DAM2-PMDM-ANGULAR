@@ -4,16 +4,19 @@
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Direccion</th>
-            <th>Edad</th>
+            <th>F.Nacimineto</th>
+            <th>Sexo</th>
         </tr>
     </thead>
     <tbody>
         <!--el ngFor es como un foreach-->
          <tr *ngFor="let alumno of alumnos">
-            <td>{{alumno.nombre}}</td>
-            <td>{{alumno.apellidos}}</td>
+            <td>{{alumno.nombre | uppercase}}</td>
+            <td>{{alumno.apellidos |uppercase}}</td>
             <td>{{alumno.direccion}}</td>
-            <td>{{alumno.edad}}</td>
+            <td>{{alumno.fnac | date: 'dd/MM/yyyy'}}</td>
+            <td>{{alumno.sexo}}</td>
+
         </tr>   
     </tbody>
 </table>

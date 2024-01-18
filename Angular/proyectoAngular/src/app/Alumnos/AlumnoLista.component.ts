@@ -15,10 +15,10 @@ import { RouterOutlet } from '@angular/router';
 export class AlumnoListaComponent {
     //depende de lo que pongamos aqui abajo se vera una cosa u otra en la pagina web
     alumnos : any[] = [
-        {nombre: 'Perico', apellidos: 'Delgado', direccion: 'Madrid', edad: 20},
-        {nombre: 'Juan', apellidos: 'Garcia', direccion: 'Zaragoza', edad: 32},
-        {nombre: 'Pedro', apellidos: 'Gomez', direccion: 'Pamplona', edad: 11},
-        {nombre: 'Pablo', apellidos: 'Delgado', direccion: 'Madrid', edad: 22},
+        {nombre: 'Perico', apellidos: 'Delgado', direccion: 'Madrid', fnac: '02/28/1999', sexo: 'Hombre'},
+        {nombre: 'Juan', apellidos: 'Garcia', direccion: 'Zaragoza', fnac: '02/28/1998', sexo: 'Hombre'},
+        {nombre: 'Pedro', apellidos: 'Gomez', direccion: 'Pamplona', fnac: '02/28/1997', sexo: 'Mujer'},
+        {nombre: 'Pablo', apellidos: 'Delgado', direccion: 'Madrid', fnac: '02/28/1996', sexo: 'Hombre'},
     ];
 
   }
