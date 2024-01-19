@@ -2,7 +2,6 @@
     <thead>
         <tr>
             <th>Nombre</th>
-            <th>Apellido</th>
             <th>Direccion</th>
             <th>F.Nacimineto</th>
             <th>Sexo</th>
@@ -11,12 +10,13 @@
     <tbody>
         <!--el ngFor es como un foreach-->
          <tr *ngFor="let alumno of alumnos">
-            <td>{{alumno.nombre | uppercase |alumnoTitulo:alumno.sexo}}</td>
-            <td>{{alumno.apellidos |uppercase}}</td>
+            <td>{{alumno.nombre | uppercase |alumnoTitulo:alumno.sexo}} {{alumno.apellidos |uppercase}}</td>
             <td>{{alumno.direccion}}</td>
             <td>{{alumno.fnac | date: 'dd/MM/yyyy'}}</td>
             <td>{{alumno.sexo}}</td>
-
-        </tr>   
+        </tr> 
+        <tr *ngIf="alumnos.length == 0">
+            <td colspan="4">No hay alumnos</td>
+        </tr>  
     </tbody>
 </table>
