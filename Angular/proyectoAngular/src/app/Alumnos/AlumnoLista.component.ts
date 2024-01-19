@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-
+import { AlumnoTituloPipe } from './AlumnoTitulo.pipe';
 @Component({
 // Define el selector del componente, este será usado para insertar este componente en otros archivos HTML
   selector: 'lista-alumnos',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, AlumnoTituloPipe],
   templateUrl: './AlumnoLista.component.html',  
   styleUrl: './Alumno.component.css'
 })
