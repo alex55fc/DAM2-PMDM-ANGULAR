@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
@@ -12,9 +12,12 @@ import { RouterOutlet } from '@angular/router';
 
 // Define la clase del componente
 export class AlumnoCountComponent {
-    //depende de lo que pongamos aqui abajo se vera una cosa u otra en la pagina web
+    //usamos input para que el padre pueda pasarle parametros al hijo
+    @Input()
     todos : number = 0;
+    @Input()
     hombres : number = 0;
+    @Input()
     mujeres : number = 0;
   }
   
