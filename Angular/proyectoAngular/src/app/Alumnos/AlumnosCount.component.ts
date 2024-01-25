@@ -17,10 +17,10 @@ export class AlumnoCountComponent {
     opcionElegida : string = 'Todos';
     @Output()
     //esto es para que el padre pueda escuchar el evento
-    globalElegido : EventEmitter<string> = new EventEmitter<string>();
+    opcionElegidaChange : EventEmitter<string> = new EventEmitter<string>();
     //esto es para que el padre pueda escuchar el evento
     cuandoCambiemos(){
-      this.globalElegido.emit(this.opcionElegida);
+      this.opcionElegidaChange.emit(this.opcionElegida);
     }
     //usamos input para que el padre pueda pasarle parametros al hijo
     @Input()

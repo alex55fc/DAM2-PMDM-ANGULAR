@@ -1,6 +1,7 @@
 <cuantos-alumno [todos]="getNumTodos()"
                 [hombres]="getNumHombres()"
-                [mujeres]="getNumMujeres()">
+                [mujeres]="getNumMujeres()"
+                (opcionElegidaChange)="alCambiar($event)">
 </cuantos-alumno>
 <table>
     <thead>
@@ -14,7 +15,7 @@
     <tbody>
         <!--el ngFor es como un foreach-->
         <ng-container *ngFor="let alumno of alumnos">
-            <tr *ngIf="seleccion == 'Todos' || seleccion == alumno.sexo || cuandoCambiemos()">
+            <tr *ngIf="seleccion == 'Todos' || seleccion == alumno.sexo ">
                 <td>{{alumno.nombre | uppercase |alumnoTitulo:alumno.sexo}} {{alumno.apellidos |uppercase}}</td>
                 <td>{{alumno.direccion}}</td>
                 <td>{{alumno.fnac | date: 'dd/MM/yyyy'}}</td>
