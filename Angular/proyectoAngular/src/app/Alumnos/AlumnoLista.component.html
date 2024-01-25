@@ -13,12 +13,15 @@
     </thead>
     <tbody>
         <!--el ngFor es como un foreach-->
-         <tr *ngFor="let alumno of alumnos">
-            <td>{{alumno.nombre | uppercase |alumnoTitulo:alumno.sexo}} {{alumno.apellidos |uppercase}}</td>
-            <td>{{alumno.direccion}}</td>
-            <td>{{alumno.fnac | date: 'dd/MM/yyyy'}}</td>
-            <td>{{alumno.sexo}}</td>
-        </tr> 
+        <ng-container *ngFor="let alumno of alumnos">
+            <tr *ngIf="seleccion == 'Todos' || seleccion == alumno.sexo || cuandoCambiemos()">
+                <td>{{alumno.nombre | uppercase |alumnoTitulo:alumno.sexo}} {{alumno.apellidos |uppercase}}</td>
+                <td>{{alumno.direccion}}</td>
+                <td>{{alumno.fnac | date: 'dd/MM/yyyy'}}</td>
+                <td>{{alumno.sexo}}</td>
+            </tr> 
+        </ng-container>
+
         <tr *ngIf="alumnos.length == 0">
             <td colspan="4">No hay alumnos</td>
         </tr>  

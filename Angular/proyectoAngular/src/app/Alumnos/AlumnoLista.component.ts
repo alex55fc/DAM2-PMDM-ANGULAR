@@ -15,6 +15,8 @@ import { AlumnoCountComponent } from './AlumnosCount.component';
 
 // Define la clase del componente
 export class AlumnoListaComponent {
+    //este seleccion es para el ejercicio de pasar parametros entre componentes, del hijo al padre  
+    seleccion : string = 'Hombre';
     //depende de lo que pongamos aqui abajo se vera una cosa u otra en la pagina web
     alumnos : any[] = [
         {nombre: 'Perico', apellidos: 'Delgado', direccion: 'Madrid', fnac: '02/28/1999', sexo: 'Hombre'},
