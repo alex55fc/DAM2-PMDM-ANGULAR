@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { AlumnoTituloPipe } from './AlumnoTitulo.pipe';
 //para ejercicio de pasar parametros entre componentes 
 import { AlumnoCountComponent } from './AlumnosCount.component';
+import { IAlumno , Alumno} from './Alumno';
 @Component({
 // Define el selector del componente, este será usado para insertar este componente en otros archivos HTML
   selector: 'lista-alumnos',
@@ -23,14 +24,17 @@ export class AlumnoListaComponent {
       this.seleccion = opcionElegida;
     }
     //---------
-    //depende de lo que pongamos aqui abajo se vera una cosa u otra en la pagina web
-    alumnos : any[] = [
-        {nombre: 'Perico', apellidos: 'Delgado', direccion: 'Madrid', fnac: '02/28/1999', sexo: 'Hombre'},
+    //ejercicio con la interfaz
+    alumnos : Alumno[];
+    constructor() {
+      this.alumnos = [
+        {nombre: 'Perico', apellidos: 'Delgado', direccion: 'Madrid', fnac: '02/28/1999', sexo: 'Hombre', nom_padre: 'ee'},
         {nombre: 'Juan', apellidos: 'Garcia', direccion: 'Zaragoza', fnac: '02/28/1998', sexo: 'Hombre'},
         {nombre: 'Pedro', apellidos: 'Gomez', direccion: 'Pamplona', fnac: '02/28/1997', sexo: 'Mujer'},
         {nombre: 'Pablo', apellidos: 'Delgado', direccion: 'Madrid', fnac: '02/28/1996', sexo: 'Hombre'},
-   
-      ];
+        ]
+    }
+
       //nuevo ejercicio pasar parametros de componente padre a hijo
       getNumTodos() : number {
         return this.alumnos.length;
