@@ -5,13 +5,16 @@ import { AlumnoTituloPipe } from './AlumnoTitulo.pipe';
 //para ejercicio de pasar parametros entre componentes 
 import { AlumnoCountComponent } from './AlumnosCount.component';
 import { IAlumno , Alumno} from './Alumno';
+import { AlumnosService } from './AlumnosService';
 @Component({
 // Define el selector del componente, este será usado para insertar este componente en otros archivos HTML
   selector: 'lista-alumnos',
   standalone: true,
   imports: [CommonModule, RouterOutlet, AlumnoTituloPipe, AlumnoCountComponent],
   templateUrl: './AlumnoLista.component.html',  
-  styleUrl: './Alumno.component.css'
+  styleUrl: './Alumno.component.css',
+  //como no se puede usar el servicio en el constructor, se debe declarar en el providers
+  providers: [AlumnosService]
 })
 
 // Define la clase del componente
@@ -26,13 +29,9 @@ export class AlumnoListaComponent {
     //---------
     //ejercicio con la interfaz
     alumnos : Alumno[];
-    constructor() {
-      this.alumnos = [
-        {nombre: 'Perico', apellidos: 'Delgado', direccion: 'Madrid', fnac: '02/28/1999', sexo: 'Hombre', nom_padre: 'ee'},
-        {nombre: 'Juan', apellidos: 'Garcia', direccion: 'Zaragoza', fnac: '02/28/1998', sexo: 'Hombre'},
-        {nombre: 'Pedro', apellidos: 'Gomez', direccion: 'Pamplona', fnac: '02/28/1997', sexo: 'Mujer'},
-        {nombre: 'Pablo', apellidos: 'Delgado', direccion: 'Madrid', fnac: '02/28/1996', sexo: 'Hombre'},
-        ]
+    //ejercicio del service
+    constructor(losAlumnos : AlumnosService) {
+      this.alumnos = losAlumnos.getAlumnos();
     }
 
       //nuevo ejercicio pasar parametros de componente padre a hijo
