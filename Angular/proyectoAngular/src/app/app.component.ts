@@ -21,6 +21,7 @@ import { AlumnoListaComponent } from './Alumnos/AlumnoLista.component';
   `
   ,
 
+  
   /*ngIf es para que si es true se muestre y si es false no se muestre
   `
     <img src="assets/tricolorr.jpg" width='200' *ngIf='visible'>
