@@ -29,11 +29,12 @@ export class AlumnoListaComponent {
     //---------
     //ejercicio con la interfaz
     alumnos : Alumno[];
+    //-------------------
     //ejercicio del service
     constructor(losAlumnos : AlumnosService) {
       this.alumnos = losAlumnos.getAlumnos();
     }
-
+    //-------------------
       //nuevo ejercicio pasar parametros de componente padre a hijo
       getNumTodos() : number {
         return this.alumnos.length;

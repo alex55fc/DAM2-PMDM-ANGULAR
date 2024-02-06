@@ -1,4 +1,5 @@
 export interface IAlumno {
+    id : number;
     nombre: string;
     apellidos: string;
     direccion: string;
@@ -7,7 +8,7 @@ export interface IAlumno {
     nom_padre?: string;
 }
 export class Alumno implements IAlumno {
-    constructor(public nombre: string,public apellidos: string,public direccion: string,public fnac: string,public sexo: string, public nom_padre? : string) {
+    constructor(public id : number,public nombre: string,public apellidos: string,public direccion: string,public fnac: string,public sexo: string, public nom_padre? : string) {
     }
 
 }
