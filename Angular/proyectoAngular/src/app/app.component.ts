@@ -7,13 +7,15 @@ import { RouterOutlet } from '@angular/router';
 import { AlumnoComponent } from './Alumnos/Alumno.component';
 // Importa el componente 'AlumnoListaComponent' desde el archivo 'AlumnoLista.component.ts'
 import { AlumnoListaComponent } from './Alumnos/AlumnoLista.component';
+//Para ejercicio de la API
+import { HttpClientModule } from '@angular/common/http';
 // Define un componente con metadatos
 @Component({
   // Define el selector del componente, este será usado para insertar este componente en otros archivos HTML
   selector: 'app-root',  
   standalone: true,  
   //añadir aqui cada import que hagamos
-  imports: [CommonModule, RouterOutlet, AlumnoComponent, AlumnoListaComponent],
+  imports: [CommonModule, RouterOutlet, AlumnoComponent, AlumnoListaComponent, HttpClientModule],
   
   template: 
   `<el-alumno></el-alumno>

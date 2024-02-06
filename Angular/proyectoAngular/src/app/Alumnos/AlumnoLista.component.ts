@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { AlumnoTituloPipe } from './AlumnoTitulo.pipe';
@@ -6,6 +6,9 @@ import { AlumnoTituloPipe } from './AlumnoTitulo.pipe';
 import { AlumnoCountComponent } from './AlumnosCount.component';
 import { IAlumno , Alumno} from './Alumno';
 import { AlumnosService } from './AlumnosService';
+//para ejercicio de la API
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Component({
 // Define el selector del componente, este será usado para insertar este componente en otros archivos HTML
   selector: 'lista-alumnos',
@@ -18,7 +21,17 @@ import { AlumnosService } from './AlumnosService';
 })
 
 // Define la clase del componente
-export class AlumnoListaComponent {
+export class AlumnoListaComponent implements OnInit {
+    //-------------------
+    //ejercicio PARA LA API
+    alumnos : Alumno[]= [];
+    
+    constructor(public losAlumnos : AlumnosService) {
+    }
+    ngOnInit(): void {
+      this.losAlumnos.getAlumnosFromAPI().subscribe((datosAlumnos) => 
+        this.alumnos = datosAlumnos);
+      }
     //----------
     //esto  es para el ejercicio de pasar parametros entre componentes, del hijo al padre  
     seleccion : string = 'Todos';
@@ -28,12 +41,12 @@ export class AlumnoListaComponent {
     }
     //---------
     //ejercicio con la interfaz
-    alumnos : Alumno[];
+    //alumnos : Alumno[];
     //-------------------
     //ejercicio del service
-    constructor(losAlumnos : AlumnosService) {
+    /*constructor(losAlumnos : AlumnosService) {
       this.alumnos = losAlumnos.getAlumnos();
-    }
+    }*/
     //-------------------
       //nuevo ejercicio pasar parametros de componente padre a hijo
       getNumTodos() : number {
