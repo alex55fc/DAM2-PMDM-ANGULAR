@@ -20,7 +20,7 @@ import { Observable } from 'rxjs';
   providers: [AlumnosService]
 })
 
-// Define la clase del componente
+//Este es el componente que se mostrara cuando se acceda a la ruta de Alumnos
 export class AlumnoListaComponent implements OnInit {
     //-------------------
     //ejercicio PARA LA API

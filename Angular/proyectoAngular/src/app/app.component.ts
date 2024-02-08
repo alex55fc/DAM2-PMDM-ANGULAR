@@ -19,7 +19,23 @@ import { HttpClientModule } from '@angular/common/http';
   
   template: 
   `<el-alumno></el-alumno>
+  <br><br>
+  <h3>Esto es para el ejercicio de la API</h3>
   <lista-alumnos></lista-alumnos>
+  <br><br>
+  <h3>Esto es para el ejercicio de rutas</h3>
+  <div style="padding: 10px;">
+  <ul class="nav nav-tabs" id="menu">
+      <li class="nav-item">
+        <a class="nav-link active" href="Alumnos">Link alumn</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link active" href="Profesores">Link prof</a>
+      </li>
+  </ul>
+  <router-outlet></router-outlet>
+
+  </div>
   `
   ,
 
