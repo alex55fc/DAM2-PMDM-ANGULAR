@@ -9,11 +9,13 @@ import { AlumnosService } from './AlumnosService';
 //para ejercicio de la API
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
+//para ejercicio de 
+import { RouterModule} from '@angular/router';
 @Component({
 // Define el selector del componente, este será usado para insertar este componente en otros archivos HTML
   selector: 'lista-alumnos',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, AlumnoTituloPipe, AlumnoCountComponent],
+  imports: [CommonModule, RouterOutlet, AlumnoTituloPipe, AlumnoCountComponent, RouterModule],
   templateUrl: './AlumnoLista.component.html',  
   styleUrl: './Alumno.component.css',
   //como no se puede usar el servicio en el constructor, se debe declarar en el providers

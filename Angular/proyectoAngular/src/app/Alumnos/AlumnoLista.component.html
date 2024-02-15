@@ -16,7 +16,7 @@
         <!--el ngFor es como un foreach-->
         <ng-container *ngFor="let alumno of alumnos">
             <tr *ngIf="seleccion == 'Todos' || seleccion == alumno.sexo ">
-                <td>{{alumno.nombre | uppercase |alumnoTitulo:alumno.sexo}} {{alumno.apellidos |uppercase}}</td>
+                <td><a [routerLink]= "['/Alumnos', alumno.id]" routerLink="router-link-active">{{alumno.nombre | uppercase |alumnoTitulo:alumno.sexo}} {{alumno.apellidos |uppercase}}</a></td>
                 <td>{{alumno.direccion}}</td>
                 <td>{{alumno.fnac | date: 'dd/MM/yyyy'}}</td>
                 <td>{{alumno.sexo}}</td>
