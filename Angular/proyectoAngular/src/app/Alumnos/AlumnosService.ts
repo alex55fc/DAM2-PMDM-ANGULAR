@@ -17,4 +17,8 @@ export class AlumnosService {
     getAlumnosFromAPI(): Observable<Alumno[]> {
         return this.http.get<Alumno[]>("https://localhost:44367/api/Alumno");
     }
+    //esto es el ejerciio del link de alumno sobre el nombre    
+    getAlumnosPorId(id : number): Observable<Alumno> {
+        return this.http.get<Alumno>("https://localhost:44367/api/Alumno/" + id);
+    }
 }

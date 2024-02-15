@@ -1,28 +1,27 @@
 <table>
     <thead>
-        <tr>
-            <!--otra forma de hacerlo 
-            <th [attr.colspan]=colummnas>Ciclista</th>
-            -->
-            <th attr.colspan={{colummnas}}>Ciclista</th>
-        </tr>
+
     </thead>
     <tbody>
          <tr>
             <td>Nombre</td>
-            <td>{{nombre}}</td>
+            <td>{{alumno.nombre}}</td>
         </tr>
         <tr>
             <td>Apellidos</td>
-            <td>{{apellidos}}</td>
+            <td>{{alumno.apellidos}}</td>
         </tr>
         <tr *ngIf="visibles">
             <td>Direccion</td>
-            <td>{{direccion}}</td>
+            <td>{{alumno.direccion}}</td>
         <tr *ngIf="visibles">
             <td>Edad</td>
-            <td>{{edad}}</td>   
+            <td>{{alumno.fnac}}</td>   
         </tr>   
+        <tr>
+            <td>Sexo</td>
+            <td>{{alumno.sexo}}</td>
+        </tr>
     </tbody>
 
 
